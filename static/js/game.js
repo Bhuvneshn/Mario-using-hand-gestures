@@ -17,9 +17,9 @@ const mainThemeSong = document.getElementById('mainTheme');
 
 
 document.addEventListener('click', () => {
-    mainThemeSong.muted = false;
-    mainThemeSong.play();
+    window.location.href = './';
 });
+
 
 
 //game av setup
@@ -189,6 +189,8 @@ scene("game", ({ level, score }) => {
 
 
     function sendImage() {
+        mainThemeSong.muted = false;
+        mainThemeSong.play();
         setInterval(() => {
             Webcam.snap(function (data_uri) {
                 jQuery.ajax({
@@ -284,7 +286,7 @@ scene("game", ({ level, score }) => {
     player.collides('pipe', () => {
         go('game', {
             level: (level + 1) % maps.length,
-            scores: scoreLabel.value
+            score: scoreLabel.value
         })
     })
 
