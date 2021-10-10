@@ -317,7 +317,7 @@ scene("game", ({ level, score }) => {
 
 scene('lose', ({ score }) => {
     add([text('Final Score: ' + score, 32), origin('center'), pos(width() / 2, height() / 2)]);
-    add([text("Click Here To Reset Game"), origin('center'), pos(width() / 2, 230)]);
+    add([text("Click Here To Reset Game"), origin('center'), pos(width() / 2, 290)]);
     playAudio('static/audio/sfx_death.wav')
 })
 
